@@ -10,13 +10,13 @@
     "provisioners": [
         {
           "type"              : "shell",
-          "script"            : "scripts/ansible.sh"
+          "script"            : "scripts/dockerinstall.sh"
         }
       ],
     "builders": [
       {
         "type": "amazon-ebs",
-        "ami_name": "Golden-AMI",
+        "ami_name": "Docker-AMI",
         "ami_description": "The AMI contains the required softwares pre-installed",
         "instance_type": "t2.micro",
         "region": "{{user `aws_region`}}",
