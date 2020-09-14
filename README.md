@@ -31,27 +31,26 @@ In my case, I have windows as my local machine and below are the instructions.
    
    
 
-Please follow the below steps for deploying the mediawiki application.
+Please follow the below steps for deploying the Docker Host via Packer:
 
-1. Set the AWS access and secret keys as env variables in the local machine.
-2. Run the packer build from local machine to create the golden AMI which will be used for the application server.
-```bash
-packer build redhat.json
-```
-3. Create the Jenkins server via terraform code.
-4. Configure the Jenkins and install the "Amazon EC2 Plugin". Create a keypair and place the pem key contents in "EC2 Key Pair's Private Key"
-5. Use Systems manager document "AWS-RunRemoteScript" and pass the required parameters using the Jenkins job. Use the awc cli command
-```bash
-aws ssm send-command
-```
-6. Once the jenkins job is completed successfully hit the url
-```bash
-http://<your-server-public-ip>
-```
+1. Clone the Repo- git clone https://github.com/balajirajmohan/twdemo.git
+2. Run the packer build from local machine (twdemo\Packer) path to setup Docker Host which is likely an Amazon Linux with Docker installed via Packer.
 
-|    Actions        |  Tools Used                |
-| ----------------- | -------------------------- |
-| AMI Creation      |  Packer                    |
-| Infra Provisioning|  Terraform                 |
-| Deployment        |  Ansible                   |
-| Orchestration Tool|  Jenkins & Systems Manager |
+packer build amibuild.json
+
+Please follow the below steps for deploying the Jenkins Server Using Terraform:
+
+1. From Local Machine, navigate to twdemo\Terraform folder and follow the below steps:
+
+   terraform init 
+   terraform validate
+   terraform plan
+   terraform apply --auto-approve
+
+
+
+
+2. From Terraform appply output, Please copy the public ip of EC2 vm and 
+
+http://<serverpublicip>:8080 to login to Server.
+
