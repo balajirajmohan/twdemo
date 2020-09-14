@@ -1,6 +1,6 @@
 instance_count              = 1
 name                        = "docker-host"
-ami                         = "ami-0202ebcc3bee25db0"  # Golden AMI created from packer
+ami                         = "ami-0dff6beeda42e1a6b"  # Golden AMI created from packer
 instance_type               = "t2.micro"
 subnet_id                   = "subnet-b1c761fd"
 associate_public_ip_address = true

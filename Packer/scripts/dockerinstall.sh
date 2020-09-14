@@ -2,7 +2,7 @@
 sudo amazon-linux-extras install docker -y
 
 #To Start the docker Service
-sudo service docker start
+sudo systemctl start docker
 
 #Adding Docker Permissions for EC2-User
 sudo usermod -a -G docker ec2-user
