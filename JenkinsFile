@@ -35,8 +35,7 @@ sh "docker rmi $registry:$BUILD_NUMBER"
 }
 stage('deploy into Docker Host') {
 steps{
-sh "ssh -tt ec2-user@18.130.199.154 -i mediawiki.pem"
-sh "docker run --name balaji-mediawiki -p 8080:80 -d balajirajmohanbr/mediawiki:latest"
+sh "ansible-playbook playbook.yml -i inventory.txt"
 }
 }
 }
