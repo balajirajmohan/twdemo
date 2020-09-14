@@ -7,18 +7,29 @@ Tech Stacks Used:
 3.Container Runtime- Docker
 4.Image Artifcatory - DockerHub
 
-Steps to Reproduce:
+steps to reproduce:
 1. Login to AWS Console and Create an IAM user with Admin Role.
 2. Download the .csv Crdentials
+3. As a Best Practise, I have configured my Acess Key ID and Secret access key as a ENV Variables and added to the path so that it can support my Terraform and Packer deployments.
 
 
 
-The repository holds the code for deploying the mediawiki application
+Tools Needs to be installed on Local Machine:
 
-Required softwares to be installed in the local machine
+In my case, I have windows as my local machine and below are the instructions.
+
+1. Packer - Download Scoop and Install Packer
+
+   Open Powershell as admin and run Set-ExecutionPolicy RemoteSigned -scope CurrentUser followed by iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
+   scoop install packer
+   
+   For Linux/Macos- https://www.packer.io/docs/install
 
 
-2. Terraform - Download from [terraform](https://www.terraform.io/downloads.html)
+2. Terraform - https://www.terraform.io/downloads.html -> Windows 64Bit and allow the download.
+   unzip terraform.exe and add the AWS Access Key ID and secret access key to Windows Environment Variables.
+   
+   
 
 Please follow the below steps for deploying the mediawiki application.
 
