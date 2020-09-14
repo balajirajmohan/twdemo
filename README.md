@@ -48,9 +48,20 @@ Please follow the below steps for deploying the Jenkins Server Using Terraform:
    terraform apply --auto-approve
 
 
-
-
 2. From Terraform appply output, Please copy the public ip of EC2 vm and 
 
    http://<Server-publicip> to login to Server with port 8080
+   
+Establishing Connection between Jenkins Server and Docker Host:
+
+1. .pem has been stored in Private S3 Bucket and Jenkins server can connect with s3 using aws s3 cp s3://pemkeytw/mediawiki.pem /root and can download the .pem of docker host
+
+2. ssh-keygen from Jenkins Server and id_rsa.pub has been moved to authorized_keys of Docker host to establish connection
+
+3. Now, Jenkins server would be able to connect to DockerHost for Build and Deploy actions
+
+
+
+
+
 
