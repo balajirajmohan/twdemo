@@ -1,10 +1,19 @@
-# thoughtworks
+# Thoughtworks - Mediaiki Application deployment using CI-CD pipeline
+
+Tech Stacks Used:
+
+CI/CD- Jenkins
+Infra Provisioning- Terraform
+Container Runtime- Docker
+Image Artifcatory - DockerHub
+
+
 
 The repository holds the code for deploying the mediawiki application
 
 Required softwares to be installed in the local machine
 
-1. Packer - Download from [packer](https://www.packer.io/downloads)
+
 2. Terraform - Download from [terraform](https://www.terraform.io/downloads.html)
 
 Please follow the below steps for deploying the mediawiki application.
