@@ -36,7 +36,7 @@ Please follow the below steps for deploying the Docker Host via Packer:
 1. Clone the Repo- git clone https://github.com/balajirajmohan/twdemo.git
 2. Run the packer build from local machine (twdemo\Packer) path to setup Docker Host which is likely an Amazon Linux with Docker installed via Packer.
 
-packer build amibuild.json
+   packer build amibuild.json
 
 Please follow the below steps for deploying the Jenkins Server Using Terraform:
 
@@ -52,5 +52,5 @@ Please follow the below steps for deploying the Jenkins Server Using Terraform:
 
 2. From Terraform appply output, Please copy the public ip of EC2 vm and 
 
-http://<serverpublicip>:8080 to login to Server.
+   http://<serverpublicip>:8080 to login to Server.
 
