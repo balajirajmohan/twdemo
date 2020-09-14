@@ -60,6 +60,28 @@ Establishing Connection between Jenkins Server and Docker Host:
 
 3. Now, Jenkins server would be able to connect to DockerHost for Build and Deploy actions
 
+Jenkins Pipleine Creation:
+
+1. In Jenkins go to  New Item → Pipeline, type the name you want for this Pipeline project and then click OK.
+
+2. Following that you can skip all General and Build Trigger options and go straight to the Pipeline section. Here you can include a Pipeline definition named Jenkinsfile from Github.
+
+3. Now we are ready to run the Pipeline and check the output if an error is present on any stage during the run.
+
+Jenkins Pipleine Stages:
+
+1. Cloing our Github
+
+2. Building our image
+
+3. Deploy our image
+
+4. Cleaning up 
+
+5. deploy into Docker Host
+
+
+
 
 
 
