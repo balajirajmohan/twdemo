@@ -10,4 +10,7 @@ sudo usermod -a -G docker ec2-user
 #Make Docker Auto start
 sudo chkconfig docker on
 
+#Install Git
+sudo yum install git -y
+
 
