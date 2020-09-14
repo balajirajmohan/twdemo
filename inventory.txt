@@ -1,1 +1,1 @@
-172.31.41.36 ansible_user=balaji
+172.31.41.36 ansible_ssh_user=root
