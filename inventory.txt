@@ -1,1 +1,1 @@
-172.31.41.36 ansible_user=ec2-user
+172.31.41.36 ansible_user=balaji
