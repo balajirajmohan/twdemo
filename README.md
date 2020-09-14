@@ -2,10 +2,14 @@
 
 Tech Stacks Used:
 
-CI/CD- Jenkins
-Infra Provisioning- Terraform
-Container Runtime- Docker
-Image Artifcatory - DockerHub
+1.CI/CD- Jenkins
+2.Infra Provisioning- Terraform
+3.Container Runtime- Docker
+4.Image Artifcatory - DockerHub
+
+Steps to Reproduce:
+1. Login to AWS Console and Create an IAM user with Admin Role.
+2. Download the .csv Crdentials
 
 
 
