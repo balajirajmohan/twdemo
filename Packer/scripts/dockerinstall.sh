@@ -7,3 +7,7 @@ sudo systemctl start docker
 #Adding Docker Permissions for EC2-User
 sudo usermod -a -G docker ec2-user
 
+#Make Docker Auto start
+sudo chkconfig docker on
+
+
