@@ -52,5 +52,5 @@ Please follow the below steps for deploying the Jenkins Server Using Terraform:
 
 2. From Terraform appply output, Please copy the public ip of EC2 vm and 
 
-   http://<ec2-public-ip>:8080 to login to Server.
+   http://<Server-publicip> to login to Server with port 8080
 
