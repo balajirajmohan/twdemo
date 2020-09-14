@@ -1,0 +1,46 @@
+pipeline {
+    agent any
+ 
+   
+ stages {
+      stage('checkout') {
+           steps {
+             
+                git branch: 'master', url: 'https://github.com/balajirajmohan/twdemo.git'
+             
+          }
+        }
+  
+        }
+
+ stage('Docker Build and Tag') {
+           steps {
+              
+                sh 'docker build -t mediawiki:latest .' 
+                sh 'docker tag mediawiki tw/mediawiki:latest'
+                //sh 'docker tag mediawiki balaji/mediawiki:$BUILD_NUMBER'
+               
+          }
+        }
+     
+  stage('Publish image to Docker Hub') {
+          
+            steps {
+        withDockerRegistry([ credentialsId: "dockerHub", url: "" ]) {
+          sh  'docker push nikhilnidhi/samplewebapp:latest'
+        //  sh  'docker push nikhilnidhi/samplewebapp:$BUILD_NUMBER' 
+        }
+                  
+          }
+        }
+     
+      
+ stage('Run Docker container on remote hosts') {
+             
+            steps {
+                sh "docker -H ssh://ec2-user@172.31.28.25 run -d -p 8003:8080 nikhilnidhi/samplewebapp"
+ 
+            }
+        }
+    }
+ }
