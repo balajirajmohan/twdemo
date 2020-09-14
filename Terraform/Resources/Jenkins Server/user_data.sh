@@ -7,9 +7,9 @@ yum install jenkins -y
 yum install java -y
 systemctl start jenkins
 chkconfig jenkins on
-sudo yum install git -y
-sudo git clone https://github.com/balajirajmohan/pemrepo.git
-sudo mv /pemropo/mediawiki.pem /root
+aws s3 cp s3://pemkeytw/mediawiki.pem /root
+sudo ssh-keygen
+
 
 
 
