@@ -35,7 +35,7 @@ sh "docker rmi $registry:$BUILD_NUMBER"
 }
 stage('deploy into Docker Host') {
 steps{
-sh "ansible-playbook playbook.yml -i inventory.txt"
+sh "docker -H ssh://root@172.31.41.36 run -d -p 8080:80 $registry:$BUILD_NUMBER"
 }
 }
 }
