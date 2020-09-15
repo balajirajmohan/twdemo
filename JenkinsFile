@@ -40,3 +40,8 @@ sh "docker -H ssh://root@172.31.41.36 run -d -p 8080:80 $registry:$BUILD_NUMBER"
 }
 }
 }
+
+Pre-requisites needs to be done:
+
+1. Add docker permisisons for Jenkins user
+2. Open port 8080 in Docker Host machine to expose the application publicly.

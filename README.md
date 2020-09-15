@@ -50,7 +50,7 @@ Please follow the below steps for deploying the Jenkins Server Using Terraform:
 
 2. From Terraform appply output, Please copy the public ip of EC2 vm and 
 
-   http://<Server-publicip> to login to Server with port 8080
+   http://<Server-public-ip> to login to Server with port 8080
    
 Establishing Connection between Jenkins Server and Docker Host:
 
@@ -79,6 +79,12 @@ Jenkins Pipleine Stages:
 4. Cleaning up 
 
 5. deploy into Docker Host
+
+Pre-requisites needs to be done:
+
+1. Add docker permisisons for Jenkins user
+2. Open port 8080 in Docker Host machine to expose the application publicly.
+3. SSH Public keys needs to shared from Jenkins Host to Docker host for secure SSH Connection.
 
 
 
