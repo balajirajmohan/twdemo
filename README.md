@@ -20,8 +20,13 @@ In my case, I have windows as my local machine and below are the instructions.
 
 1. Packer - Download Scoop and Install Packer
 
-   Open Powershell as admin and run Set-ExecutionPolicy RemoteSigned -scope CurrentUser followed by iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
+   Open Powershell as admin and run  below commands CurrentUser followed by iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
    scoop install packer
+   ```bash
+   Set-ExecutionPolicy RemoteSigned -scope
+   iex (new-object net.webclient).downloadstring('https://get.scoop.sh')
+   scoop install packer
+   ```
    
    For Linux/Macos- https://www.packer.io/docs/install
 
@@ -36,7 +41,9 @@ Please follow the below steps for deploying the Docker Host via Packer:
 1. Clone the Repo- git clone https://github.com/balajirajmohan/twdemo.git
 2. Run the packer build from local machine (twdemo\Packer) path to setup Docker Host which is likely an Amazon Linux with Docker installed via Packer.
 
+   ```bash
    packer build amibuild.json
+   ```
 
 Please follow the below steps for deploying the Jenkins Server Using Terraform:
 
