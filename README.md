@@ -82,9 +82,10 @@ Jenkins Pipleine Stages:
 
 Pre-requisites needs to be done:
 
-1. Add docker permisisons for Jenkins user
+1. Add docker permisisons for Jenkins user.
 2. Open port 8080 in Docker Host machine to expose the application publicly.
 3. SSH Public keys needs to shared from Jenkins Host to Docker host for secure SSH Connection.
+4. Please note that Jenkins terraform script needs to be execured first and Packer build then after.
 
 
 
