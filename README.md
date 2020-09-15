@@ -42,15 +42,19 @@ Please follow the below steps for deploying the Jenkins Server Using Terraform:
 
 1. From Local Machine, navigate to twdemo\Terraform folder and follow the below steps:
 
+   ```bash
    terraform init 
    terraform validate
    terraform plan
    terraform apply --auto-approve
+   ```
 
 
 2. From Terraform appply output, Please copy the public ip of EC2 vm and 
 
+   ```bash
    http://<Server-public-ip> to login to Server with port 8080
+   ```
    
 Establishing Connection between Jenkins Server and Docker Host:
 
