@@ -1,7 +1,7 @@
 pipeline {
 environment {
 registry = "balajirajmohanbr/mediawiki"
-registryCredential = 'dockerhub_id'
+registryCredential = 'balajirajmohanbr'
 dockerImage = ''
 }
 agent any
