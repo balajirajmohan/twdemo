@@ -16,6 +16,7 @@ sudo yum install -y yum install http://mirror.centos.org/centos/7/extras/x86_64/
 yum -y install docker-ce
 sudo systemctl start docker
 sudo systemctl enable docker
+sudo usermod -aG docker root
 sudo chmod 666 /var/run/docker.sock
 
 
