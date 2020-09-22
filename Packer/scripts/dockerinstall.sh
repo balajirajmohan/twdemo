@@ -14,7 +14,7 @@ sudo chkconfig docker on
 sudo yum install git -y
 
 #Add jenkins user to run Docker commands
-sudo usermod -a -G docker jenkins
+#sudo usermod -a -G docker jenkins
 
 
 
