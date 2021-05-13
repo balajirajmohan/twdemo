@@ -1,4 +1,4 @@
-# Thoughtworks - Mediaiki Application deployment using CI-CD pipeline
+# Thoughtworks - Mediawiki Application deployment using CI-CD pipeline
 
 Tech Stacks Used:
 
